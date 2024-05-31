@@ -13,7 +13,7 @@
   }
 }
 
-@mixin buttonSize($size) {
+@mixin buttonSize($size, $minwidth: null) {
   //min-width가로, height세로 ,padding여백, font-size글씨크기
   @if $size == "sm" {
     &.#{$size} {
@@ -22,5 +22,22 @@
       font-size: 14px;
       border-radius: 5px;
     }
+  } @else if $size == "lg" {
+    &.#{$size} {
+      height: 61px;
+      padding: 0 37px;
+      font-size: 16px;
+      border-radius: 8px;
+    }
+  } @else if $size -- "base" {
+    &.#{$size} {
+      height: 40px;
+      padding: 0 20px;
+      font-size: 14px;
+      border-radius: 5px;
+    }
+  }
+  @if $minwidth {
+    min-width: $minwidth;
   }
 }

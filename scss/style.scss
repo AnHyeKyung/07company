@@ -6,10 +6,17 @@
 @import "./abstracts/mixin/avatar";
 @import "./abstracts/mixin/radio";
 @import "./abstracts/mixin/button";
+@import "./abstracts/mixin/splitList";
 @import "./base/reset";
 @import "./components/typography";
 @import "./components/form";
 @import "./components/button";
 @import "./components/gnb";
+@import "./components/search";
+@import "./components/skillList";
+@import "./components/step";
+@import "./components/introduce";
 @import "./layout/header";
 @import "./layout/space";
+@import "./layout/align";
+@import "./pages/main";

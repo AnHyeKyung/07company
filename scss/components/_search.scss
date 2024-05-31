@@ -1,0 +1,33 @@
+.search {
+  width: 502px;
+  border-radius: 8px;
+  background: #fff;
+  padding: 6px;
+  @include tablet {
+    width: 422px;
+  }
+  @include mobile {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  fieldset {
+    display: grid;
+    gap: 6px;
+    grid-template-columns: 1fr min-content;
+    align-items: center;
+  }
+  input {
+    --w: 100%;
+    //width: 100%; 위는 변수 아래는 css
+    border: none;
+  }
+  .btn {
+    white-space: nowrap;
+    @include mobile {
+      height: 50px;
+    }
+  }
+  legend {
+    display: none;
+  }
+}

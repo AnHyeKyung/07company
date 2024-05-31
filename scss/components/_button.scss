@@ -1,4 +1,17 @@
 .btn {
   @include buttonColor("red");
   @include buttonSize("sm");
+  @include buttonSize("lg");
+  &.m-width {
+    @include buttonSize("base", 160px);
+  }
+}
+.btn-menu {
+  @include background("ico_menu.svg", null);
+  display: none;
+  width: 32px;
+  height: 32px;
+  @include mobile {
+    display: block;
+  }
 }

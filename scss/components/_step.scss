@@ -1,0 +1,40 @@
+.step {
+  @include splitList(bg, "ico_arrow.svg", 32px, 32px, 47px);
+
+  display: flex;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 31px;
+  @include tablet {
+    padding: 0;
+  }
+  @include tablet {
+    @include splitList(bg, "ico_arrow.svg", 28px, 32px, 47px);
+  }
+
+  @include mobile {
+    @include splitList(bg, "ico_arrow.svg", 36px, 36px, 40px);
+    flex-direction: column;
+    li {
+      flex-direction: column;
+    }
+    ::before {
+      transform: rotate(90deg);
+      margin: 40px 0 !important;
+    }
+  }
+
+  //   li {
+  //     display: flex;
+  //     align-items: center;
+  //     + li {
+  //       &::before {
+  //         @include background("ico_arrow.svg", null);
+  //         content: "";
+  //         width: 32px;
+  //         height: 32px;
+  //         margin: 0 47px;
+  //       }
+  //     }
+  //   }
+}
